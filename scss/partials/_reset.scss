@@ -12,18 +12,27 @@ html{
 }
 body {
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 /* container */
 .container{
     max-width: calc( 1104px + ( 2 * $container-padding) );
-    padding: $container-padding;
+    padding: 0 $container-padding;
     margin :0 auto;
 
 }
+/* lists */
 ul , ol {
     list-style: none;
 }
+/* links */
 a{
     text-decoration: none;
+}
+/* images */
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
 }

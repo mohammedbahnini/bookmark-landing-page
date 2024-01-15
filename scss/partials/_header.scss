@@ -9,11 +9,12 @@ header {
         display: flex;
         gap: 44px;
         align-items: center;
+        margin-top: 48px;
         &__item a{
             
             text-transform: uppercase;
-                color: $dark-blue;
-                font-size: 13px;
+            color: $dark-blue;
+            font-size: 13px;
 
                
         }

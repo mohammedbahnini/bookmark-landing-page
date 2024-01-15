@@ -1,0 +1,86 @@
+.download-extension{
+    text-align: center;
+    .header{
+        max-width: 540px;
+        margin: 0 auto ;
+        margin-bottom: 48px;
+        .title{
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 52px;
+            color: $dark-blue;
+            margin-bottom: 16px;
+        }
+        p{
+            color: $grayish-blue;
+            line-height: 28px;
+
+        }
+    }
+    .extenstions{
+        display: flex;
+        gap: 34px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .extension{
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20);
+        max-width: 280px;
+        &-body{
+            text-align: center;
+            padding-top: 49px;
+            padding-bottom: 32px;
+            background-image: url('../../assets/bg-dots.svg') ;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            img{
+                width: 36.42%;
+                margin: 0 auto;
+                margin-bottom: 32px;
+            }
+            .title{
+                font-size: 20px;
+                letter-spacing: 0.25px;
+                font-weight: 500;
+                color: $dark-blue;
+                margin-bottom: 6px;
+            }
+            p{
+                font-size: 15px;
+                color: $grayish-blue;
+                line-height: 28px;
+    
+            }
+        }
+
+        &-footer{
+            padding: 24px 26px;
+            a{
+                display: block;
+                border-radius: 5px;
+                width: 100%;
+                background-color: $soft-blue;
+                color: white;
+                text-align: center;
+                font-size: 14px;
+                line-height: 28px;
+                padding: 10px 24px;
+
+            }
+        }
+
+        &.firefox{
+            margin-top: 40px;
+        }
+        &.opera{
+            margin-top: 80px;
+        }
+        
+       
+
+    }
+    
+}
