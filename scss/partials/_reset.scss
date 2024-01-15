@@ -1,0 +1,29 @@
+@import 'vars';
+
+* , *::after , *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+html{
+    font-size: $font-size ;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* container */
+.container{
+    max-width: calc( 1104px + ( 2 * $container-padding) );
+    padding: $container-padding;
+    margin :0 auto;
+
+}
+ul , ol {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}

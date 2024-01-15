@@ -1,0 +1,69 @@
+/* Colors */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* body */
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/* container */
+.container {
+  max-width: calc(1104px + 4rem);
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 44px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .nav-links__item a {
+  text-transform: uppercase;
+  color: rgb(36, 42, 69);
+  font-size: 13px;
+}
+header .nav-links .btn-login {
+  border-radius: 5px;
+  padding: 12px 32px;
+  background-color: rgb(250, 89, 89);
+  font-size: 500;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+header .nav-links .btn-login a {
+  color: white;
+}
+/*# sourceMappingURL=app.css.map */
