@@ -63,6 +63,7 @@ header .nav-links {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  padding-bottom: 6px;
 }
 header .nav-links__item a {
   text-transform: uppercase;
@@ -70,6 +71,7 @@ header .nav-links__item a {
   font-size: 13px;
   margin-top: 12px;
   display: block;
+  letter-spacing: 1.5px;
 }
 header .nav-links .btn-login {
   border-radius: 5px;
@@ -86,7 +88,7 @@ header .nav-links .btn-login a {
 
 .intro {
   position: relative;
-  margin-top: 179px;
+  padding-top: 179px;
   padding-bottom: 123px;
 }
 .intro::after {
