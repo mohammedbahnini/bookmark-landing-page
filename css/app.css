@@ -378,7 +378,7 @@ header .nav-links .btn-login a {
   padding-bottom: 149px;
 }
 .questions .container {
-  max-width: 540px;
+  max-width: 541px;
   padding: 0;
 }
 .questions .header {
@@ -395,6 +395,14 @@ header .nav-links .btn-login a {
 .questions .header p {
   color: rgb(145, 148, 162);
   line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 18px;
+  width: 100%;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .questions .accordion {
   margin-bottom: 54px;
@@ -406,7 +414,7 @@ header .nav-links .btn-login a {
   border-top: 1px solid rgba(145, 148, 162, 0.5);
 }
 .questions .accordion .head {
-  padding: 16px 0;
+  padding: 18px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
