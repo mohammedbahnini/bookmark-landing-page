@@ -274,6 +274,7 @@ header .nav-links .btn-login a {
   color: white;
   border-radius: 5px;
   background-color: rgb(82, 103, 223);
+  display: inline-block;
 }
 
 .download-extension {
@@ -324,7 +325,7 @@ header .nav-links .btn-login a {
   background-position: bottom;
 }
 .download-extension .extension-body img {
-  width: 36.42%;
+  width: 48.07%;
   margin: 0 auto;
   margin-bottom: 32px;
 }
