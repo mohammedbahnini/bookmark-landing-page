@@ -47,24 +47,29 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-top: 48px;
+}
+header .logo {
+  margin-top: 8px;
 }
 header .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 44px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 48px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 header .nav-links__item a {
   text-transform: uppercase;
   color: rgb(36, 42, 69);
   font-size: 13px;
+  margin-top: 12px;
+  display: block;
 }
 header .nav-links .btn-login {
   border-radius: 5px;
@@ -75,6 +80,7 @@ header .nav-links .btn-login {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 header .nav-links .btn-login a {
+  margin-top: 0;
   color: white;
 }
 
@@ -124,6 +130,8 @@ header .nav-links .btn-login a {
   color: rgb(36, 42, 69);
   letter-spacing: 0.15px;
   margin-bottom: 24px;
+  font-weight: 500;
+  line-height: 52px;
 }
 .intro .intro-text p {
   color: rgb(145, 148, 162);
@@ -257,6 +265,7 @@ header .nav-links .btn-login a {
 
 .download-extension {
   text-align: center;
+  padding-top: 149px;
 }
 .download-extension .header {
   max-width: 540px;
