@@ -338,4 +338,192 @@ header .nav-links .btn-login a {
 .download-extension .extension.opera {
   margin-top: 80px;
 }
+
+.questions {
+  padding-top: 149px;
+  padding-bottom: 149px;
+}
+.questions .container {
+  max-width: 540px;
+}
+.questions .header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.questions .header .title {
+  color: rgb(36, 42, 69);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 52px;
+  margin-bottom: 16px;
+}
+.questions .header p {
+  color: rgb(145, 148, 162);
+  line-height: 28px;
+}
+.questions .accordion {
+  margin-bottom: 54px;
+}
+.questions .accordion .accordion-item {
+  border-bottom: 1px solid rgba(145, 148, 162, 0.5);
+}
+.questions .accordion .accordion-item:first-child {
+  border-top: 1px solid rgba(145, 148, 162, 0.5);
+}
+.questions .accordion .head {
+  padding: 19px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.questions .accordion .title {
+  line-height: 32px;
+  font-size: 18px;
+  color: rgb(36, 42, 69);
+  font-weight: 400;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.questions .accordion .icon {
+  display: block;
+  width: 16px;
+  height: 8px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.questions .accordion .body {
+  max-height: 0;
+  overflow: hidden;
+}
+.questions .action {
+  padding: 10px 24px;
+  font-weight: 500;
+  color: white;
+  font-size: 14px;
+  background-color: rgb(82, 103, 223);
+  border-radius: 5px;
+  display: table;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: rgb(82, 103, 223);
+}
+footer .body {
+  padding: 58px 0 74px 0;
+  text-align: center;
+  max-width: 442px;
+}
+footer .title {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 25px;
+  letter-spacing: 5px;
+}
+footer p {
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
+  line-height: 40px;
+  letter-spacing: -0.1px;
+  margin-bottom: 36px;
+}
+footer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+footer form input[type=email] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 5px;
+  background-color: white;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: rgb(145, 148, 162);
+}
+footer form input[type=email]::-webkit-input-placeholder {
+  color: rgba(145, 148, 162, 0.25);
+}
+footer form input[type=email]::-moz-placeholder {
+  color: rgba(145, 148, 162, 0.25);
+}
+footer form input[type=email]:-ms-input-placeholder {
+  color: rgba(145, 148, 162, 0.25);
+}
+footer form input[type=email]::-ms-input-placeholder {
+  color: rgba(145, 148, 162, 0.25);
+}
+footer form input[type=email]::placeholder {
+  color: rgba(145, 148, 162, 0.25);
+}
+footer form input[type=button] {
+  background-color: rgb(250, 89, 89);
+  border-radius: 5px;
+  padding: 10px 24px;
+  border: none;
+  color: white;
+  line-height: 28px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}
+footer .links {
+  background-color: rgb(36, 42, 69);
+}
+footer .links nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .links nav .logo {
+  display: block;
+  width: 148px;
+  margin-right: 63px;
+}
+footer .links nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: 44px;
+}
+footer .links nav ul a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+}
+footer .links nav .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+footer .links nav .social a {
+  display: block;
+  width: 24px;
+}
 /*# sourceMappingURL=app.css.map */
