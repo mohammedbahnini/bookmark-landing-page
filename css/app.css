@@ -440,6 +440,7 @@ header .nav-links .btn-login a {
   font-weight: 500;
   color: white;
   font-size: 14px;
+  line-height: 28px;
   background-color: rgb(82, 103, 223);
   border-radius: 5px;
   display: table;
