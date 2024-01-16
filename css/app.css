@@ -315,6 +315,9 @@ header .nav-links .btn-login a {
   -webkit-box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
           box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
   max-width: 280px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .download-extension .extension:nth-child(1) img {
   max-width: 102px;
@@ -328,7 +331,7 @@ header .nav-links .btn-login a {
 .download-extension .extension-body {
   text-align: center;
   padding-top: 49px;
-  padding-bottom: 32px;
+  padding-bottom: 36px;
   background-image: url("../assets/bg-dots.svg");
   background-repeat: no-repeat;
   background-position: bottom;
