@@ -1,8 +1,6 @@
 .features{
     
-    .container{
-        padding: 0;
-    }
+
     &-header{
         text-align: center;
         margin: 0 auto;
@@ -24,7 +22,7 @@
 
     }
 
-
+    // clickable tabs
     .tabs{
         margin-top: 72px;
         
@@ -42,6 +40,7 @@
             font-size: 16px;
             color: $dark-blue;
             cursor: pointer;
+            border-bottom: none;
             &.active{
                 border-bottom: 4px solid $soft-red;
             }
@@ -51,6 +50,8 @@
 
     .tabs-content{
         position: relative;
+        height: 510px;
+
         &:after{
             content: '';
             height: 45.28%;
@@ -63,28 +64,40 @@
             z-index: -1;
             right: calc(50% + 80px);
         }
+        .container{
+            position: relative;
+        }
         .tab-content{
             padding-top: 72px;
             padding-bottom: 89px;
-            position: relative;
+            position: absolute;
+            left: 0;
+            right: 0;
+            //transform: translateX(-50%);
+
            
             .container{
+                //display: grid;
+                gap: 125px;
+                //width: 100%;
                 display: flex;
+                justify-content: end;
+                
+                .illustration , .text{
+                    transition: 1s ease-out ;
+                }
                 .illustration{
-                    
-                    width: 50%;
-                    display: flex;
-                    justify-content: end;
-                    &-wrapper{
-                        max-width: 536px;
-                        margin-right: 15px;
-                    }
-
-
+                    //width: 50%;
+                    transform: translateX(-80px);
+                    opacity: 0;
+                    //flex: 1;
+                    width: 48.46%;
                 }
                 .text{
+                    width: 40.5%;
                     padding-top: 57px;
-                    padding-left: 110px;
+                    transform: translateX(80px);
+                    opacity: 0;
                     .title{
                         font-size: 32px;
                         color: $dark-blue;
@@ -111,6 +124,38 @@
 
                     }
                 }
+            }
+
+            &.active{
+                transition-timing-function: ease-in;
+                .illustration{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                .text {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // some specific mesurements
+    #tab2{
+        .illustration{
+            display: flex;
+            justify-content: end;
+            img{
+                width: 87.31%;
+            }
+        }
+    }
+    #tab3{
+        .illustration{
+            display: flex;
+            justify-content: end;
+            img{
+                width: 82%;
             }
         }
     }

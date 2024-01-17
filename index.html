@@ -88,37 +88,73 @@
 
         <div class="tabs">
           <ul class="tab-items">
-            <li class="tab-item active">
+            <li class="tab-item active" data-tab="tab1">
               Simple Bookmarking
             </li>
-            <li class="tab-item">
+            <li class="tab-item" data-tab="tab2">
               Speedy Searching
             </li>
-            <li class="tab-item">
+            <li class="tab-item" data-tab="tab3">
               Easy Sharing
             </li>
           </ul>
 
           <div class="tabs-content">
 
-            <div class="tab-content">
-              <div class="container">
-                  <div class="illustration">
-                    <div class="illustration-wrapper">
-                      <img src="assets/illustration-features-tab-1.svg" alt="">
+            <div class="container">
 
+              <div class="tab-content active" id="tab1" >
+                <div class="container">
+                    <div class="illustration">
+                      <img src="assets/illustration-features-tab-1.svg" alt="">
+                    </div>
+      
+                    <div class="text">
+                      <h2 class="title">Bookmark in one click</h2>
+                      <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
+                        gives you complete control over how you manage your favourite sites.</p>
+                        <a href="#">More Info</a>
                     </div>
                   </div>
-    
-                  <div class="text">
-                    <h2 class="title">Bookmark in one click</h2>
-                    <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
-                      gives you complete control over how you manage your favourite sites.</p>
-                      <a href="#">More Info</a>
+              
+              </div>
+  
+              <div class="tab-content" id="tab2" >
+                <div class="container">
+                    <div class="illustration">
+                      <img src="assets/illustration-features-tab-2.svg" alt="">
+                    </div>
+      
+                    <div class="text">
+                      <h2 class="title">Intelligent search</h2>
+                      <p>Our powerful search feature will help you find saved sites in no time at all. 
+                        No need to trawl through all of your bookmarks.</p>
+                        <a href="#">More Info</a>
+                    </div>
                   </div>
-                </div>
-            
+              
+              </div>
+  
+  
+              <div class="tab-content" id="tab3" >
+                <div class="container">
+                    <div class="illustration">
+                      <img src="assets/illustration-features-tab-3.svg" alt="">
+                    </div>
+      
+                    <div class="text">
+                      <h2 class="title">Share your bookmarks</h2>
+                      <p>Easily share your bookmarks and collections with others. Create a shareable 
+                        link that you can send at the click of a button.</p>
+                        <a href="#">More Info</a>
+                    </div>
+                  </div>
+              
+              </div>
+
             </div>
+
+            
            
           </div>
         </div>
@@ -303,6 +339,42 @@
 
   </main>
 
+  <script>
+    window.addEventListener('load' , ()=>{
+      // mke intro visible 
+      const intro = document.querySelector('.intro');
+      intro.classList.add('visible');
+
+      // add fonctionality for tabs
+      const tabs = document.querySelectorAll('.tab-items li');
+      
+      tabs.forEach( (item)=>{
+        item.addEventListener('click' , ()=>{
+          resetTabs();
+          item.classList.add('active');
+
+          const tabsContent = document.querySelectorAll('.tab-content');
+          tabsContent.forEach( tabContent => tabContent.classList.remove('active') );
+
+          const id = item.dataset.tab;
+          const tab = document.querySelector(`#${id}`);
+          setTimeout(() => {
+            tab.classList.add('active');
+          }, 1000);
+          
+
+          
+          console.log(tab);
+        });
+
+        const resetTabs = ()=> (tabs.forEach( item => item.classList.remove('active')));
+      });
+
+      
+    });
+
+
+  </script>
 
 </body>
 </html>
