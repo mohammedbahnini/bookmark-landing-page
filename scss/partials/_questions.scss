@@ -31,17 +31,43 @@
     .accordion{
         margin-bottom: 54px;
         .accordion-item{
+            
             &:first-child{
                 border-top : 1px solid rgba($grayish-blue , .5);
 
             }
             border-bottom: 1px solid rgba($grayish-blue , .5);
+
+            &.open{
+                .title , ion-icon{
+                    color: $soft-red;
+                }
+                ion-icon{
+                    transform-origin: center;
+                    transform: rotate(180deg);
+                }
+                .body {
+                    max-height: 100vh;
+                    visibility: visible;
+                }
+            }
         }
         .head{
             padding: 18px 0;
             display: flex;
             align-items: center;
             cursor: pointer;
+
+            ion-icon{
+                font-size: 20px;
+                transition: .2s linear;
+            }
+            &:hover{
+                .title , ion-icon{
+                    color: $soft-red;
+                }
+
+            }
         }
         .title {
             //padding: 19px 0;
@@ -53,13 +79,23 @@
         }   
         .icon{
             display: block;
-            width: 16px;
-            height: 8px;
             flex-shrink: 0;
+            padding-top: 8px;
         } 
         .body {
             max-height: 0;
             overflow: hidden;
+            visibility: hidden;
+            transition: .5s linear;
+
+
+            p{
+                font-size: 16px;
+                line-height: 36px;
+                color: rgba(36, 42, 69, 1);
+                letter-spacing: 0.15px;
+                padding:  11px 0;
+            }
         }
     }
     

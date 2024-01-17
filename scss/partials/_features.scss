@@ -41,6 +41,9 @@
             color: $dark-blue;
             cursor: pointer;
             border-bottom: none;
+            &:hover{
+                color: $soft-red;
+            }
             &.active{
                 border-bottom: 4px solid $soft-red;
             }
@@ -77,9 +80,8 @@
 
            
             .container{
-                //display: grid;
-                gap: 125px;
-                //width: 100%;
+
+                gap: 11.3%;
                 display: flex;
                 justify-content: end;
                 

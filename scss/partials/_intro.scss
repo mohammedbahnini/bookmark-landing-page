@@ -5,7 +5,6 @@
     &::after{
         content: '';
         display: block;
-        //width: 500px;
         height: 352px;
         background-color: $soft-blue;
         position: absolute;
@@ -58,21 +57,53 @@
     .actions{
         display: flex;
         gap: 16px;
+        a  , a::after{
+            transition: .3s ease-in;
+        }
         a{
             line-height: 28px;
             font-size: 14px;
             font-weight: 500;
             padding: 10px 24px;
             border-radius: 5px;
+            box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                
+                z-index: 2;
+                border-radius: 5px;
+                border: 2px solid transparent;
+
+            }
             &:first-child{
                 background-color: $soft-blue;
                 color: white;
+                &:hover {
+                    color: $soft-blue;
+                    background-color: white;
+                    &::after {
+                        border-color:$soft-blue;
+                    }
 
+                }
             }
             &:nth-child(2){
                 background-color: rgba(247, 247, 247, 1);
                 color: $dark-blue;
-                box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+                &:hover {
+                    color: $dark-blue;
+                    background-color: white;
+                   &::after{
+                    border-color:$dark-blue;
+                   }
+                }
+                
             }
         }
     }

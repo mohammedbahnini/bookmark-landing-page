@@ -172,37 +172,40 @@
         </div>
       </div>
 
-      <div class="container extenstions">
-        <div class="extension chrome">
+      <div class="container extensions">
+        <div class="container">
+          <div class="extension chrome">
+            <div class="extension-body">
+             <img src="assets/logo-chrome.svg" alt="Chrome">
+             <h3 class="title">Add to Chrome</h3>
+             <p>Minimum version 62</p>
+            </div>
+            <div class="extension-footer">
+             <a href="#">Add & Install Extension</a>
+            </div>       
+         </div>
+         <div class="extension firefox">
            <div class="extension-body">
-            <img src="assets/logo-chrome.svg" alt="Chrome">
-            <h3 class="title">Add to Chrome</h3>
-            <p>Minimum version 62</p>
-           </div>
-           <div class="extension-footer">
-            <a href="#">Add & Install Extension</a>
-           </div>       
+             <img src="assets/logo-firefox.svg" alt="FireFox">
+             <h3 class="title">Add to Firefox</h3>
+             <p>Minimum version 55</p>
+            </div>
+            <div class="extension-footer">
+             <a href="#">Add & Install Extension</a>
+            </div>   
+         </div>
+         <div class="extension opera">
+           <div class="extension-body">
+             <img src="assets/logo-opera.svg" alt="Opera">
+             <h3 class="title">Add to Opera</h3>
+             <p>Minimum version 46</p>
+            </div>
+            <div class="extension-footer">
+             <a href="#">Add & Install Extension</a>
+            </div>   
+         </div>
         </div>
-        <div class="extension firefox">
-          <div class="extension-body">
-            <img src="assets/logo-firefox.svg" alt="FireFox">
-            <h3 class="title">Add to Firefox</h3>
-            <p>Minimum version 55</p>
-           </div>
-           <div class="extension-footer">
-            <a href="#">Add & Install Extension</a>
-           </div>   
-        </div>
-        <div class="extension opera">
-          <div class="extension-body">
-            <img src="assets/logo-opera.svg" alt="Opera">
-            <h3 class="title">Add to Opera</h3>
-            <p>Minimum version 46</p>
-           </div>
-           <div class="extension-footer">
-            <a href="#">Add & Install Extension</a>
-           </div>   
-        </div>
+        
       </div>
     </section>
 
@@ -224,7 +227,7 @@
                 What is Bookmark?
               </h3>
               <span class="icon">
-                <img src="assets/icon-arrow.svg" alt="Arrow">
+                <ion-icon name="chevron-down-outline"></ion-icon>
               </span>
              </div>
              <div class="body">
@@ -239,7 +242,7 @@
                How can I request a new browser?
              </h3>
              <span class="icon">
-               <img src="assets/icon-arrow.svg" alt="Arrow">
+              <ion-icon name="chevron-down-outline"></ion-icon>
              </span>
             </div>
             <div class="body">
@@ -257,7 +260,7 @@
             Is there a mobile app?
            </h3>
            <span class="icon">
-             <img src="assets/icon-arrow.svg" alt="Arrow">
+            <ion-icon name="chevron-down-outline"></ion-icon>
            </span>
           </div>
           <div class="body">
@@ -274,7 +277,7 @@
             What about other Chromium browsers?
            </h3>
            <span class="icon">
-             <img src="assets/icon-arrow.svg" alt="Arrow">
+            <ion-icon name="chevron-down-outline"></ion-icon>
            </span>
           </div>
           <div class="body">
@@ -325,10 +328,10 @@
 
             <div class="social">
               <a href="#" class="facebook">
-                <img src="assets/icon-facebook.svg" alt="Facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
               </a>
               <a href="#" class="twitter">
-                <img src="assets/icon-twitter.svg" alt="Twitter">
+                <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </div>
           </nav>
@@ -338,7 +341,8 @@
     </footer>
 
   </main>
-
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script>
     window.addEventListener('load' , ()=>{
       // mke intro visible 
@@ -370,7 +374,35 @@
         const resetTabs = ()=> (tabs.forEach( item => item.classList.remove('active')));
       });
 
+      const obsever = new IntersectionObserver((entries)=>{
+        entries.forEach( entry => {
+          if( entry.isIntersecting )
+          {
+            entry.target.classList.add('visible');
+            obsever.unobserve(entry);
+          }
+          console.log(entry.target);
+        } );
+      } , 
+      {
+        threshold : 0.7
+      }
+      );
+
+      const extensionsContainer = document.querySelector('.extensions .container');
+      obsever.observe(extensionsContainer);
       
+
+      // accordion
+      const accordions = document.querySelectorAll('.accordion-item');
+      accordions.forEach( accordion => {
+        const head = accordion.querySelector('.head');
+        head.addEventListener('click' , ()=>{
+          accordion.classList.toggle('open');
+       
+        });
+        console.log(head);
+      });
     });
 
 

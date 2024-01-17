@@ -51,6 +51,15 @@ footer {
             font-weight: 500;
             font-size: 14px;
             letter-spacing: .25px;
+            position: relative;
+            transition: .2s ease-in;
+            cursor: pointer;
+            &:hover{
+                outline: 2px solid $soft-red;
+                background-color: white ;
+                color: $soft-red;
+
+            }
         }
     }
 
@@ -77,6 +86,10 @@ footer {
                     font-size: 13px;
                     line-height: 17px;
                     letter-spacing: 1.5px;
+                   
+                    &:hover{
+                        color: $soft-red;
+                    }
                 }
             }
 
@@ -84,8 +97,13 @@ footer {
                 display: flex;
                 gap: 40px;
                 a{
+                    color: white;
                     display: block;
-                    width: 24px ;
+                    //width: 24px ;
+                    font-size: 32px;
+                    &:hover{
+                        color:$soft-red;
+                    }
                 }
             }
         }
