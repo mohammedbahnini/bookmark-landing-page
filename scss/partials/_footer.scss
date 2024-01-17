@@ -1,5 +1,8 @@
 footer {
     background-color: $soft-blue;
+    @include sm{
+        display: none;
+    }
     .body {
         padding: 58px 0 74px 0;
         text-align: center;

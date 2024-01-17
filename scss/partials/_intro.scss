@@ -17,6 +17,9 @@
     .container{
         display: flex;
         gap: 65px;
+        @include sm{
+            flex-direction: column-reverse;
+        }
     }
     .intro-hero{
         position: relative;
@@ -24,6 +27,9 @@
         transition: 1s ease-in ;
         opacity: 0;
         transform: translateX(50px);
+        @include sm{
+            width: 100%;
+        }
         img{
             position: absolute;
             height: auto;
@@ -31,7 +37,14 @@
             width: calc(100% + 73px);
             transform: scale(1.13);
             bottom: -21%;
+            @include sm{
+                transform: none;
+                position: relative;
+                width: 100%;
+            }
         }
+
+       
     }
 
     .intro-text{
@@ -51,6 +64,10 @@
             color: $grayish-blue;
             line-height: 28px;
             margin-bottom: 32px;
+        }
+        @include sm{
+            max-width: none;
+            width: 100%;
         }
     }
 

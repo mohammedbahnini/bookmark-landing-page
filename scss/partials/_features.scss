@@ -1,6 +1,8 @@
 .features{
     
-
+    @include sm{
+        display: none;
+    }
     &-header{
         text-align: center;
         margin: 0 auto;
@@ -76,9 +78,7 @@
             position: absolute;
             left: 0;
             right: 0;
-            //transform: translateX(-50%);
 
-           
             .container{
 
                 gap: 11.3%;
@@ -86,7 +86,7 @@
                 justify-content: end;
                 
                 .illustration , .text{
-                    transition: 1s ease-out ;
+                    transition: .3s ease-out ;
                 }
                 .illustration{
                     //width: 50%;

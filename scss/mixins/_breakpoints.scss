@@ -1,0 +1,7 @@
+@import '../partials/vars';
+
+@mixin sm{
+    @media screen and (max-width : $sm-breakpoint) {
+        @content ;
+    }
+}

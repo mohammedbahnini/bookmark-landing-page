@@ -1,4 +1,7 @@
 .questions{
+    @include sm{
+        display: none;
+    }
     padding-top: 149px;
     padding-bottom: 149px;
     .container{
