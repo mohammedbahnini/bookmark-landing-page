@@ -2,22 +2,35 @@
     text-align: center;
     padding-top: 149px;
     @include sm{
-        display: none;
+        padding-top: 70px;
     }
     .header{
         max-width: 540px;
         margin: 0 auto ;
         margin-bottom: 48px;
+        @include sm{
+            margin-bottom: 40px;
+        }
         .title{
             font-size: 32px;
             font-weight: 500;
             line-height: 52px;
             color: $dark-blue;
             margin-bottom: 16px;
+            @include sm{
+                font-size: 24px;
+                line-height: 52px;
+                margin: 0;
+            }
         }
         p{
             color: $grayish-blue;
             line-height: 28px;
+            @include sm{
+                font-size: 15px;
+                line-height: 25px;
+
+            }
 
         }
     }
@@ -33,6 +46,12 @@
                     transform: translateY(0);
                 }
             }
+
+            @include sm{
+                flex-direction: column;
+                padding: 0;
+                gap: 40px;
+            }
         }
     }
     
@@ -45,6 +64,10 @@
         opacity: 0;
         transform: translateY(-80px);
         transition: 0.5s ease-in;
+        @include sm{
+            max-width: none;
+            width: 100%;
+        }
         &:nth-child(1){
             img{
                 max-width: 102px;
@@ -133,9 +156,15 @@
 
         &.firefox{
             margin-top: 40px;
+            @include sm{
+                margin-top: 0;
+            }
         }
         &.opera{
             margin-top: 80px;
+            @include sm{
+                margin-top: 0;
+            }
         }
         
        

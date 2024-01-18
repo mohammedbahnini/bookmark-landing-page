@@ -1,12 +1,17 @@
 .questions{
-    @include sm{
-        display: none;
-    }
+    
     padding-top: 149px;
     padding-bottom: 149px;
+    @include sm{
+        padding-top: 140px;
+        padding-bottom: 123px;
+    }
     .container{
         max-width: 541px;
         padding: 0;
+        @include sm{
+            padding: 0 32px;
+        }
 
     }
     .header {
@@ -18,6 +23,11 @@
             font-size: 32px;
             line-height: 52px;
             margin-bottom: 16px;
+            @include sm{
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 16px;
+            }
         }
         p{
             color: $grayish-blue;
@@ -28,6 +38,10 @@
             width: 100%;
             font-style: normal;
             display: flex;
+            @include sm {
+                font-size: 15px;
+                line-height: 25px;
+            }
         }
     }
 
@@ -44,6 +58,7 @@
             &.open{
                 .title , ion-icon{
                     color: $soft-red;
+                    
                 }
                 ion-icon{
                     transform-origin: center;
@@ -79,6 +94,10 @@
             color: $dark-blue;
             font-weight: 400;
             flex: 1;
+            @include sm{
+                font-size: 15px;
+                line-height: 32px;
+            }
         }   
         .icon{
             display: block;
@@ -98,6 +117,10 @@
                 color: rgba(36, 42, 69, 1);
                 letter-spacing: 0.15px;
                 padding:  11px 0;
+                @include sm{
+                    font-size: 15px;
+                    line-height: 30px;
+                }
             }
         }
     }

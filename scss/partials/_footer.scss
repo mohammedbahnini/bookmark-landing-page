@@ -1,13 +1,15 @@
 footer {
     background-color: $soft-blue;
-    @include sm{
-        display: none;
-    }
+  
     .body {
         padding: 58px 0 74px 0;
         text-align: center;
-        
         max-width: 442px;
+        @include sm{
+            padding: 0 32px;
+            padding-top: 60px;
+            padding-bottom: 38px;
+        }
     }
     .title{
         font-size: 13px;
@@ -17,6 +19,11 @@ footer {
         color: white;
         margin-bottom: 25px;
         letter-spacing: 5px;
+        @include sm{
+            line-height: 40px;
+            letter-spacing: 4.5px;
+        }
+
     }
     p{
         font-weight: 500;
@@ -25,10 +32,17 @@ footer {
         line-height: 40px;
         letter-spacing: -0.1px;
         margin-bottom: 36px;
+        @include sm {
+            font-size: 24px;
+
+        }
     }
     form{
         display: flex;
         gap: 16px;
+        @include sm{
+            flex-direction: column;
+        }
         input[type=email]{
             flex: 1;
             border-radius: 5px;
@@ -56,6 +70,7 @@ footer {
             letter-spacing: .25px;
             position: relative;
             transition: .2s ease-in;
+            font-weight: 500;
             cursor: pointer;
             &:hover{
                 outline: 2px solid $soft-red;
@@ -72,15 +87,26 @@ footer {
             display: flex;
             padding: 32px 0;
             align-items: center;
+            @include sm{
+                flex-direction: column;
+                gap: 40px;
+            }
             .logo{
                 display: block;
                 width: 148px;
                 margin-right: 63px;
+                @include sm{
+                    margin: 0 auto;
+
+                }
             }
             ul{
                 display: flex;
                 flex: 1;
                 gap: 44px;
+                @include sm{
+                    flex-direction: column;
+                }
                 a{
                     color: white;
                     text-transform: uppercase;

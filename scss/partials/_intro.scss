@@ -2,6 +2,10 @@
     position: relative;
     padding-top: 179px;
     padding-bottom: 123px;
+    @include sm{
+        padding-top: 80px;
+        padding-bottom: 140px;
+    }
     &::after{
         content: '';
         display: block;
@@ -13,12 +17,21 @@
         bottom: 0;
         z-index: -1;
         left: calc(50% + 204px);
+        @include sm{
+            width: 81%;
+            left: unset;
+            right: 0;
+            height: 203px;
+            top: calc(80px + 52px);
+            bottom: unset;
+        }
     }
     .container{
         display: flex;
         gap: 65px;
         @include sm{
             flex-direction: column-reverse;
+            gap: 50px;
         }
     }
     .intro-hero{
@@ -52,6 +65,7 @@
         transition: 1s ease-in ;
         opacity: 0;
         transform: translateX(-50px);
+
         .title{
             font-size: 48px;
             color: $dark-blue;
@@ -59,21 +73,34 @@
             margin-bottom: 24px;
             font-weight: 500;
             line-height: 52px;
+            @include sm{
+                font-size: 30px;
+                line-height: 40px;
+                margin-bottom: 16px;
+            }
         }
         p{
             color: $grayish-blue;
             line-height: 28px;
             margin-bottom: 32px;
+            @include sm{
+                font-size: 15px;
+                line-height: 25px;
+            }
         }
         @include sm{
             max-width: none;
             width: 100%;
+            text-align: center ;
         }
     }
 
     .actions{
         display: flex;
         gap: 16px;
+        @include sm{
+            gap: 14px; 
+        }
         a  , a::after{
             transition: .3s ease-in;
         }
@@ -85,6 +112,12 @@
             border-radius: 5px;
             box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
             position: relative;
+            @include sm{
+                font-size: 14px;
+                line-height: 28px;
+                padding: 10px 16px;
+                flex: 1;
+            }
             &::after{
                 content: '';
                 position: absolute;

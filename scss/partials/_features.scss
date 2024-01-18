@@ -1,8 +1,6 @@
 .features{
     
-    @include sm{
-        display: none;
-    }
+    
     &-header{
         text-align: center;
         margin: 0 auto;
@@ -15,10 +13,20 @@
         letter-spacing: 0.1px;
         font-weight: 500;
         margin-bottom: 16px;
+        @include sm{
+            font-size: 24px;
+            line-height: 52px;
+            margin-bottom: 0;
+
+        }
      }   
      p{
         color: $grayish-blue;
         line-height: 28px;
+        @include sm{
+            font-size: 15px;
+            line-height: 25px;
+        }
 
      }
 
@@ -27,13 +35,20 @@
     // clickable tabs
     .tabs{
         margin-top: 72px;
-        
+        @include sm{
+            margin-top: 40px;
+        }
         .tab-items{
             display: flex;
             margin: 0 auto;
             max-width: calc(243px * 3);
             height: 49px;
             border-bottom: 1px solid rgba($grayish-blue , .3);
+            @include sm{
+                flex-direction: column;
+                border: none;
+                height: auto;
+            }
         }
         .tab-item{
             display: block;
@@ -43,20 +58,50 @@
             color: $dark-blue;
             cursor: pointer;
             border-bottom: none;
+            position: relative;
+            
             &:hover{
                 color: $soft-red;
             }
             &.active{
                 border-bottom: 4px solid $soft-red;
+                @include sm{
+                    &::after{
+                        content: '';
+                        height: 4px;
+                        width: 143px;
+                        position: absolute;
+                        bottom: 0;
+                        background-color: $soft-red;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+    
+                }
+            }
+
+
+            @include sm{
+                line-height: 17px;
+                letter-spacing: 0.53px;
+                padding: 21px 0;
+                border-bottom: 1px solid rgba($grayish-blue , .3) !important;
+                &:first-child{
+                border-top: 1px solid rgba($grayish-blue , .3) !important;
+
+                }
+                
             }
             
         }
     }
 
-    .tabs-content{
+    .tabs-content{ 
         position: relative;
         height: 510px;
-
+        @include sm{
+            height: calc(485px + 77px + 30px);
+        }
         &:after{
             content: '';
             height: 45.28%;
@@ -68,9 +113,15 @@
             left: 0;
             z-index: -1;
             right: calc(50% + 80px);
+            @include sm{
+                height: 203px;
+                width: 82%;
+                top: 107px;
+            }
         }
         .container{
             position: relative;
+          
         }
         .tab-content{
             padding-top: 72px;
@@ -78,12 +129,18 @@
             position: absolute;
             left: 0;
             right: 0;
+            
 
             .container{
 
                 gap: 11.3%;
                 display: flex;
                 justify-content: end;
+                @include sm{
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 70px;
+                }
                 
                 .illustration , .text{
                     transition: .3s ease-out ;
@@ -94,24 +151,41 @@
                     opacity: 0;
                     //flex: 1;
                     width: 48.46%;
+                    @include sm{
+                        width: 100%;
+                    }
                 }
                 .text{
                     width: 40.5%;
                     padding-top: 57px;
                     transform: translateX(80px);
                     opacity: 0;
+                    @include sm{
+                        width: 100%;
+                        text-align: center;
+                        padding: 0;
+                    }
                     .title{
                         font-size: 32px;
                         color: $dark-blue;
                         line-height: 52px;
                         font-weight: 500;
                         margin-bottom: 16px;
+                        @include sm{
+                            font-size: 24px;
+                            line-height: 52px;
+
+                        }
                     }
                     p{
                         color: $grayish-blue;
                         line-height: 28px;
                         max-width: 445px;
                         margin-bottom: 32px;
+                        @include sm{
+                            line-height: 25px;
+                            font-size: 15px;
+                        }
                     }
                     a{
                         padding: 10px 24px;
@@ -123,6 +197,12 @@
                         border-radius: 5px;
                         background-color: $soft-blue;
                         display: inline-block;
+                        @include sm{
+                            font-size: 14px;
+                            letter-spacing: 0.2px;
+                            line-height: 28px;
+
+                        }
 
                     }
                 }
@@ -149,7 +229,12 @@
             justify-content: end;
             img{
                 width: 87.31%;
+                @include sm{
+                    width: 100%;
+                }
             }
+
+
         }
     }
     #tab3{
@@ -158,6 +243,9 @@
             justify-content: end;
             img{
                 width: 82%;
+                @include sm{
+                    width: 100%;
+                }
             }
         }
     }
