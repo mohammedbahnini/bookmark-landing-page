@@ -348,6 +348,8 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script>
     window.addEventListener('load' , ()=>{
+      document.querySelector('.tabs-content').style.height = document.querySelector('.tab-content.active').clientHeight + 'px';
+      console.log(document.querySelector('.tab-content.active').clientHeight + 'px');
       // mke intro visible 
       const intro = document.querySelector('.intro');
       intro.classList.add('visible');
@@ -365,8 +367,11 @@
 
           const id = item.dataset.tab;
           const tab = document.querySelector(`#${id}`);
+          
           setTimeout(() => {
             tab.classList.add('active');
+            document.querySelector('.tabs-content').style.height = document.querySelector('.tab-content.active').clientHeight + 'px';
+
           }, 300);
           
 

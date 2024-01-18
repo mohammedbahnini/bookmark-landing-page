@@ -320,6 +320,9 @@ header .nav-links {
     position: absolute;
     left: 0;
     right: 0; }
+    @media screen and (max-width: 475px) {
+      .features .tabs-content .tab-content {
+        padding-bottom: 77px; } }
     .features .tabs-content .tab-content .container {
       gap: 11.3%;
       display: flex;
@@ -347,7 +350,8 @@ header .nav-links {
           .features .tabs-content .tab-content .container .text {
             width: 100%;
             text-align: center;
-            padding: 0; } }
+            padding: 0;
+            display: none; } }
         .features .tabs-content .tab-content .container .text .title {
           font-size: 32px;
           color: #242a45;
@@ -389,7 +393,8 @@ header .nav-links {
         opacity: 1; }
       .features .tabs-content .tab-content.active .text {
         transform: translateX(0);
-        opacity: 1; }
+        opacity: 1;
+        display: block; }
 .features #tab2 .illustration {
   display: flex;
   justify-content: end; }
@@ -412,7 +417,7 @@ header .nav-links {
   padding-top: 149px; }
   @media screen and (max-width: 475px) {
     .download-extension {
-      padding-top: 70px; } }
+      padding-top: 0px; } }
   .download-extension .header {
     max-width: 540px;
     margin: 0 auto;
