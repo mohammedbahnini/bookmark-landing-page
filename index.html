@@ -24,7 +24,7 @@
           <img src="assets/logo-bookmark.svg" alt="Logo">
         </a>
 
-        <ul class="nav-links">
+        <ul class="nav-links hide-on-mobile">
           <li class="nav-links__item">
             <a href="#">features</a>
           </li>
@@ -38,10 +38,59 @@
             <a href="#">login</a>
           </li>
         </ul>
+
+        <a href="#" id="humberger-menu" class="hide for-mobile">
+          <img src="assets/icon-hamburger.svg" alt="Menu">
+        </a>
       </nav>
     </div>
   
   </header>
+
+  <!-- mobile menu -->
+  <div class="menu hide for-mobile open">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <img src="assets/logo-menu.svg " alt="Logo">
+        </a>
+
+        <a href="#" id="close-menu" class="hide for-mobile">
+          <img src="assets/icon-close.svg" alt="Menu">
+        </a>
+      </nav>
+
+      <div class="content">
+        <div class="container">
+          <ul class="links">
+            <li>
+              <a href="#">features</a>
+            </li>
+            <li>
+              <a href="#">princing</a>
+            </li>
+            <li>
+              <a href="#">contact</a>
+            </li>
+          </ul>
+  
+          <a href="#" id="login">login</a>
+        </div>
+        
+
+        <div class="social">
+          <a href="#" class="facebook">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="#" class="twitter">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
 
   <main>
 
@@ -364,7 +413,7 @@
 
           const tabsContent = document.querySelectorAll('.tab-content');
           tabsContent.forEach( tabContent => tabContent.classList.remove('active') );
-
+  
           const id = item.dataset.tab;
           const tab = document.querySelector(`#${id}`);
           
@@ -410,6 +459,21 @@
        
         });
         console.log(head);
+      });
+
+
+
+      // open the menu 
+      const menu = document.querySelector('.menu');
+      const body = document.body;
+
+      document.querySelector('#humberger-menu').addEventListener('click' , ()=>{
+        menu.classList.add('open');
+        body.style.overflowY = 'hidden';
+      });
+      document.querySelector('#close-menu').addEventListener('click' , ()=>{
+        menu.classList.remove('open');
+        body.style.overflowY = 'initial';
       });
     });
 

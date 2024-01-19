@@ -11,7 +11,8 @@ html {
 
 body {
   font-family: 'Rubik', sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative; }
 
 /* container */
 .container {
@@ -37,10 +38,21 @@ img {
   width: 100%;
   height: 100%; }
 
-/* Colors */
+/* some helper classes */
+.hide {
+  display: none !important; }
+
+.for-mobile {
+  display: none !important; }
+  @media screen and (max-width: 475px) {
+    .for-mobile {
+      display: initial !important; } }
+
 @media screen and (max-width: 475px) {
-  header {
-    display: none; } }
+  .hide-on-mobile {
+    display: none !important; } }
+
+/* Colors */
 header nav {
   display: flex;
   justify-content: space-between;
@@ -78,6 +90,87 @@ header .nav-links {
       background-color: white;
       outline: 2px solid #fa5959;
       outline-offset: -2px; }
+header #humberger-menu {
+  display: block;
+  align-self: center;
+  width: 18px; }
+
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(36, 42, 69, 0.9);
+  z-index: 999;
+  color: white;
+  transform-origin: top right;
+  transform: scale(0);
+  transition: .1s linear; }
+  .menu > .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+  .menu.open {
+    transform: scale(1); }
+  .menu nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 48px;
+    width: 100%; }
+  .menu .logo {
+    margin-top: 8px; }
+  .menu #close-menu {
+    width: 18px;
+    align-self: center; }
+  .menu .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1; }
+    .menu .content .container {
+      padding: 0; }
+    .menu .content ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 24px; }
+      .menu .content ul li {
+        padding: 25px 0;
+        border-bottom: 1px solid rgba(145, 148, 162, 0.5); }
+        .menu .content ul li:first-child {
+          border-top: 1px solid rgba(145, 148, 162, 0.5); }
+      .menu .content ul a {
+        font-size: 20px;
+        line-height: 17px;
+        letter-spacing: 2.3px;
+        text-transform: uppercase;
+        color: white;
+        display: inline-block; }
+    .menu .content #login {
+      color: white;
+      text-align: center;
+      display: block;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 17px;
+      letter-spacing: 2.3px;
+      font-weight: 500;
+      border-radius: 5px;
+      border: 2px solid white;
+      padding: 16px 0; }
+    .menu .content .social {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      color: white;
+      margin: 96px; }
+      .menu .content .social a {
+        color: white;
+        font-size: 24px; }
+  .menu .social {
+    justify-self: end; }
 
 .intro {
   position: relative;

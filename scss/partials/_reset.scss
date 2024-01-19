@@ -13,6 +13,7 @@ html{
 body {
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 
 /* container */
@@ -40,3 +41,22 @@ img{
     width: 100%;
     height: 100%;
 }
+
+/* some helper classes */
+.hide{
+    display: none !important;
+    //visibility: hidden !important;
+}
+
+.for-mobile{
+    display: none !important;
+    @include sm{
+        display: initial !important;
+    }
+}
+.hide-on-mobile{
+    @include sm {
+        display: none !important;
+    }
+}
+

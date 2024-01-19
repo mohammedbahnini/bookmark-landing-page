@@ -1,9 +1,7 @@
 @import '../mixins/breakpoints';
 
 header {
-    @include sm{
-        display: none;
-    }
+
     nav{
         display: flex;
         justify-content: space-between;
@@ -60,4 +58,113 @@ header {
         }
         
     }
+
+    #humberger-menu{
+        display: block;
+        align-self: center;
+        width: 18px;
+    }
+
+
+}
+
+.menu{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    background-color: rgba($dark-blue  , .9);
+    z-index: 999;
+    color: white ;
+    transform-origin: top right ;
+    transform: scale(0);
+    transition: .1s linear;
+    > .container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &.open{
+        transform: scale(1);
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 48px;
+        width: 100%;
+    }
+    .logo{
+        margin-top: 8px;
+    }
+    #close-menu{
+        width: 18px;
+        align-self: center;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        .container{
+            padding: 0;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 24px;
+            li{
+                padding: 25px 0;
+                border-bottom: 1px solid rgba($grayish-blue , .5);
+                &:first-child{
+                    border-top: 1px solid rgba($grayish-blue , .5);
+
+                }
+            }
+            a{
+                font-size: 20px;
+                line-height: 17px;
+                letter-spacing: 2.3px;
+                text-transform: uppercase;
+                color: white ;
+                display: inline-block;
+                
+            }
+        }
+
+        #login{
+            color: white ;
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            font-size: 20px;
+                line-height: 17px;
+                letter-spacing: 2.3px;
+                font-weight: 500;
+                border-radius: 5px;
+                border: 2px solid white ;
+                padding: 16px 0;
+
+        }
+
+        .social{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            color: white ;
+            margin: 96px;
+            a{
+                color: white ;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .social{
+        justify-self: end;
+    }
+
 }
